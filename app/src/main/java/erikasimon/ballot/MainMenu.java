@@ -6,26 +6,21 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 
 
-
-public class myActivity extends ActionBarActivity{ //implements View.OnClickListener{
-
-
-    Button button;
+public class MainMenu extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my);
+        setContentView(R.layout.activity_main_menu);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_my, menu);
+        getMenuInflater().inflate(R.menu.menu_main_menu, menu);
         return true;
     }
 
@@ -38,28 +33,15 @@ public class myActivity extends ActionBarActivity{ //implements View.OnClickList
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-
             return true;
         }
 
         return super.onOptionsItemSelected(item);
     }
 
-    private void buttonClick()
+    public void createBallot(View view)
     {
-        startActivity(new Intent("login.class"));
-    }
-
-    public void login(View view)
-    {
-        Intent intent = new Intent(this, loginScreen.class);
+        Intent intent = new Intent(this, createBallot.class);
         startActivity(intent);
     }
-
-    public void newUser(View view)
-    {
-        Intent intent = new Intent(this, newUserScreen.class);
-        startActivity(intent);
-    }
-
 }

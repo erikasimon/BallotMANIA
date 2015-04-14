@@ -1,9 +1,13 @@
 package erikasimon.ballot;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+
+
 
 
 public class loginScreen extends ActionBarActivity {
@@ -35,5 +39,11 @@ public class loginScreen extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void mainMenu(View view)
+    {
+        Intent intent = new Intent(this, MainMenu.class);
+        startActivity(intent);
     }
 }
