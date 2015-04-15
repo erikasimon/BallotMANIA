@@ -28,22 +28,6 @@
             android:label="@string/title_activity_new_user_screen" >
         </activity>
         <activity
-            android:name=".dummy.mainMenuListActivity"
-            android:label="@string/title_mainmenu_list"
-            android:parentActivityName=".loginScreen" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="erikasimon.ballot.loginScreen" />
-        </activity>
-        <activity
-            android:name=".dummy.mainMenuDetailActivity"
-            android:label="@string/title_mainmenu_detail"
-            android:parentActivityName=".dummy.mainMenuListActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".dummy.mainMenuListActivity" />
-        </activity>
-        <activity
             android:name=".createBallot"
             android:label="@string/title_activity_create_ballot" >
         </activity>
@@ -54,6 +38,10 @@
         <activity
             android:name=".MainMenu"
             android:label="@string/title_activity_main_menu" >
+        </activity>
+        <activity
+            android:name=".ListBallots"
+            android:label="@string/title_activity_list_ballots" >
         </activity>
     </application>
 

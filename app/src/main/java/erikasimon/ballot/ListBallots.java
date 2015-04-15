@@ -8,19 +8,19 @@ import android.view.MenuItem;
 import android.view.View;
 
 
-public class MainMenu extends ActionBarActivity {
+public class ListBallots extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_menu);
+        setContentView(R.layout.activity_list_ballots);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main_menu, menu);
+        getMenuInflater().inflate(R.menu.menu_list_ballots, menu);
         return true;
     }
 
@@ -38,16 +38,10 @@ public class MainMenu extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
-    public void createBallot(View view)
+    public void BallotOptions(View view)
     {
-        Intent intent = new Intent(this, createBallot.class);
+        Intent intent = new Intent(this, MyBallotsActivity.class);
         startActivity(intent);
     }
 
-    public void listBallots(View view)
-    {
-        Intent intent = new Intent(this, ListBallots.class);
-        startActivity(intent);
-    }
 }
